@@ -9,16 +9,38 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State private var text: [String] = ["A", "B", "C"]
-    @State private var textCount = 0
+    @State private var selectedtab: CurrentTab = .home
+    @ObservedObject var presenter = ContentViewPresenter()
+    var screenSize = UIScreen.main.bounds.size
+    
     var body: some View {
-        VStack {
-            Text(text[textCount])
-            Spacer()
-            Button("Tap to Change") {
-                textCount += 1
+        NavigationView {
+            VStack {
+                // Card View
+                VStack{
+                    // Text Inside
+                    VStack(alignment: .leading){
+                        Text("\(.localized("homescreen.main_card.loan")): \(presenter.totalLoan)")
+                        Text("\(.localized("homescreen.main_card.debt")): \(presenter.totalDebt)")
+
+                    }
+                    .padding([.top, .leading, .bottom], 10)
+                    
+                }
+                .frame(width: screenSize.width - 40, alignment: .leading)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color.white)
+                        .shadow(color: Color.gray.opacity(0.5), radius: 5, x: 3, y: 3)
+                )
+                Spacer()
+                
+                CustomTabView(selectedTab: $selectedtab)
+                
             }
+            .navigationTitle(Text("homescreen.title"))
         }
+        .background(.white)
     }
 
 }

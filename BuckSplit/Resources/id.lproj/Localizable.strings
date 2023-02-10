@@ -1,0 +1,20 @@
+
+// MARK: Common
+"common.debt" = "Hutang";
+"common.loan" = "Pinjaman";
+"common.name" = "Nama";
+"common.type" = "Tipe";
+"common.label" = "Label";
+"common.date" = "Tanggal";
+"common.amount" = "Jumlah";
+"common.desc" = "Deskripsi";
+
+// MARK: Home Screen
+"homescreen.title" = "Tambahkan sesuatu!";
+"homescreen.main_card.loan" = "Pinjaman Anda";
+"homescreen.main_card.debt" = "Hutang";
+
+// MARK: New Transaction Form
+"new_trans_form.title" = "Transaksi Baru";
+"new_trans_form.trans_infromation" = "Informasi Transaksi";
+"new_trans_form.trans_detail" = "Detil Transaksi";

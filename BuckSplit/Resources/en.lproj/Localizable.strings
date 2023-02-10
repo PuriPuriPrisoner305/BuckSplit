@@ -1,0 +1,22 @@
+
+// MARK: Common
+"common.debt" = "Debt";
+"common.loan" = "Loan";
+"common.name" = "Name";
+"common.type" = "Type";
+"common.date" = "Date";
+"common.label" = "Label";
+"common.amount" = "Amount";
+"common.desc" = "Description";
+
+// MARK: Home Screen
+"homescreen.title" = "Add something!";
+"homescreen.main_card.loan" = "Your loan";
+"homescreen.main_card.debt" = "Debt";
+
+// MARK: New Transaction Form
+"new_trans_form.title" = "New Transaction";
+"new_trans_form.trans_infromation" = "Transaction Information";
+"new_trans_form.trans_detail" = "Transaction Details";
+
+
