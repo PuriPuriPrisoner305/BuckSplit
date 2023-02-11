@@ -10,6 +10,7 @@ import Contacts
 
 struct NewTransactionFormView: View {
     @State private var isShowingContactPicker = false
+    @State private var isShowingDatePicker = false
     @ObservedObject private var presenter = NewTransactionFormPresenter()
     
     var body: some View {
@@ -59,7 +60,11 @@ struct NewTransactionFormView: View {
             Section(header: Text("new_trans_form.trans_detail")) {
                 DatePicker("common.date", selection: $presenter.transDate, displayedComponents: .date)
                 Button("new_trans_form.add_reminder") {
-                    
+                    isShowingDatePicker = true
+                }
+                .sheet(isPresented: $isShowingDatePicker) {
+                    DatePicker("Reminder", selection: $presenter.reminderDate)
+                        .padding(EdgeInsets.init(top: 30, leading: 40, bottom: 120, trailing: 50)).background(Color.gray.opacity(0.1))
                 }
                 
                 Button("new_trans_form.set_location") {
