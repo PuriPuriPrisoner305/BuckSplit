@@ -8,6 +8,8 @@
 "common.label" = "Label";
 "common.amount" = "Amount";
 "common.desc" = "Description";
+"common.location" = "Location";
+"common.save" = "Save";
 
 // MARK: Home Screen
 "homescreen.title" = "Add something!";
@@ -18,5 +20,8 @@
 "new_trans_form.title" = "New Transaction";
 "new_trans_form.trans_infromation" = "Transaction Information";
 "new_trans_form.trans_detail" = "Transaction Details";
-
-
+"new_trans_form.lender" = "Lender's name";
+"new_trans_form.borrower" = "Borrowor's name";
+"new_trans_form.set_location" = "Set location";
+"new_trans_form.add_photo" = "Add photo";
+"new_trans_form.add_reminder" = "Add reminder";

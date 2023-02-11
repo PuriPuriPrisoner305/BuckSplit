@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CustomTabView: View {
-    @State var isAddButtonTap = false
     @Binding var selectedTab: CurrentTab
     
     var body: some View {
@@ -41,8 +40,8 @@ struct CustomTabView: View {
             .tint(Color.indigo)
             
             // MARK: Add Button
-            Button {
-                isAddButtonTap = true
+            NavigationLink {
+                NewTransactionFormView()
             } label: {
                 GeometryReader { geo in
                     VStack(alignment: .center, spacing: 10) {
@@ -55,11 +54,6 @@ struct CustomTabView: View {
                 }
             }
             .tint(Color.indigo)
-            .sheet(isPresented: $isAddButtonTap, onDismiss: {
-                isAddButtonTap = false
-            }) {
-                NewTransactionFormView(isPresented: $isAddButtonTap)
-            }
                 
             // MARK: Profile Button
             Button {

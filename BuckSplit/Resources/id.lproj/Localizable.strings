@@ -8,6 +8,8 @@
 "common.date" = "Tanggal";
 "common.amount" = "Jumlah";
 "common.desc" = "Deskripsi";
+"common.location" = "Lokasi";
+"common.save" = "Simpan";
 
 // MARK: Home Screen
 "homescreen.title" = "Tambahkan sesuatu!";
@@ -18,3 +20,8 @@
 "new_trans_form.title" = "Transaksi Baru";
 "new_trans_form.trans_infromation" = "Informasi Transaksi";
 "new_trans_form.trans_detail" = "Detil Transaksi";
+"new_trans_form.lender" = "Nama pemberi pinjaman";
+"new_trans_form.borrower" = "Nama peminjam";
+"new_trans_form.set_location" = "Tambahkan lokasi";
+"new_trans_form.add_photo" = "Tambahkan foto";
+"new_trans_form.add_reminder" = "Tambahkan pengingat";

@@ -19,7 +19,7 @@ struct ContentView: View {
                 // Card View
                 VStack{
                     // Text Inside
-                    VStack(alignment: .leading){
+                    VStack(alignment: .leading, spacing: 14){
                         Text("\(.localized("homescreen.main_card.loan")): \(presenter.totalLoan)")
                         Text("\(.localized("homescreen.main_card.debt")): \(presenter.totalDebt)")
 

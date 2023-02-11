@@ -17,6 +17,7 @@
 		223C350C29966A28002AEAF0 /* NewTransactionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223C350B29966A28002AEAF0 /* NewTransactionFormView.swift */; };
 		223C350E29966D8C002AEAF0 /* NewTransactionFormEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223C350D29966D8C002AEAF0 /* NewTransactionFormEntity.swift */; };
 		223C351029967095002AEAF0 /* NewTransactionFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223C350F29967095002AEAF0 /* NewTransactionFormPresenter.swift */; };
+		227DB0D92997378C00976259 /* ContactPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DB0D82997378C00976259 /* ContactPicker.swift */; };
 		22DBD9E728A52B0800E205C3 /* BuckSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBD9E628A52B0800E205C3 /* BuckSplitApp.swift */; };
 		22DBD9E928A52B0800E205C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBD9E828A52B0800E205C3 /* ContentView.swift */; };
 		22DBD9EB28A52B0A00E205C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DBD9EA28A52B0A00E205C3 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		223C350B29966A28002AEAF0 /* NewTransactionFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionFormView.swift; sourceTree = "<group>"; };
 		223C350D29966D8C002AEAF0 /* NewTransactionFormEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionFormEntity.swift; sourceTree = "<group>"; };
 		223C350F29967095002AEAF0 /* NewTransactionFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionFormPresenter.swift; sourceTree = "<group>"; };
+		227DB0D82997378C00976259 /* ContactPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPicker.swift; sourceTree = "<group>"; };
 		22DBD9E328A52B0800E205C3 /* BuckSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuckSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DBD9E628A52B0800E205C3 /* BuckSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuckSplitApp.swift; sourceTree = "<group>"; };
 		22DBD9E828A52B0800E205C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,22 @@
 			path = NewTransactionForm;
 			sourceTree = "<group>";
 		};
+		227DB0D32997227300976259 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				227DB0D72997377C00976259 /* ContactPicker */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		227DB0D72997377C00976259 /* ContactPicker */ = {
+			isa = PBXGroup;
+			children = (
+				227DB0D82997378C00976259 /* ContactPicker.swift */,
+			);
+			path = ContactPicker;
+			sourceTree = "<group>";
+		};
 		22DBD9DA28A52B0700E205C3 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +155,7 @@
 		22DBD9F928A5359B00E205C3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				227DB0D32997227300976259 /* ReusableView */,
 				223C35032995EACD002AEAF0 /* CustomTab */,
 				22DBD9FA28A535AF00E205C3 /* HomeScreen */,
 				223C3508299669B4002AEAF0 /* NewTransactionForm */,
@@ -237,6 +256,7 @@
 				223C350C29966A28002AEAF0 /* NewTransactionFormView.swift in Sources */,
 				223C35002995D269002AEAF0 /* ContentViewEntity.swift in Sources */,
 				223C350E29966D8C002AEAF0 /* NewTransactionFormEntity.swift in Sources */,
+				227DB0D92997378C00976259 /* ContactPicker.swift in Sources */,
 				223C35052995EAE9002AEAF0 /* CustomTabView.swift in Sources */,
 				223C34FC2995BD1F002AEAF0 /* String+Extension.swift in Sources */,
 				22DBD9FC28A5360200E205C3 /* ContentViewModel.swift in Sources */,
@@ -386,6 +406,7 @@
 				DEVELOPMENT_TEAM = 8WWR82GRZD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "We may need to displaying contact list for lender/debter info";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -416,6 +437,7 @@
 				DEVELOPMENT_TEAM = 8WWR82GRZD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "We may need to displaying contact list for lender/debter info";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
