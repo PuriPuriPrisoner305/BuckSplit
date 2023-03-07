@@ -10,6 +10,8 @@
 "common.desc" = "Deskripsi";
 "common.location" = "Lokasi";
 "common.save" = "Simpan";
+"common.remove" = "Hapus";
+
 
 // MARK: Home Screen
 "homescreen.title" = "Tambahkan sesuatu!";
@@ -25,3 +27,4 @@
 "new_trans_form.set_location" = "Tambahkan lokasi";
 "new_trans_form.add_photo" = "Tambahkan foto";
 "new_trans_form.add_reminder" = "Tambahkan pengingat";
+"new_trans_form.reminder" = "Pengingat";

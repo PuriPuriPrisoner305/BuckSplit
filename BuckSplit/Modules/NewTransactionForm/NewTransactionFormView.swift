@@ -40,13 +40,11 @@ struct NewTransactionFormView: View {
                     } label: {
                         Text("Contact")
                     }
-                    .navigationBarBackButtonHidden()
-                    .navigationBarTitleDisplayMode(.inline)
-
+                    .sheet(isPresented: $isShowingContactPicker, onDismiss: nil) {
+                        ContactPickerView(contactInfo: $presenter.contactFile)
+                    }
                 }
-                .sheet(isPresented: $isShowingContactPicker, content: {
-                    ContactPickerView(contactInfo: $presenter.contactFile)
-                })
+               
                 .onChange(of: presenter.contactFile) { newValue in
                     presenter.loadContactInfo(newValue)
                 }
@@ -59,12 +57,28 @@ struct NewTransactionFormView: View {
             //MARK: Transaction Detail
             Section(header: Text("new_trans_form.trans_detail")) {
                 DatePicker("common.date", selection: $presenter.transDate, displayedComponents: .date)
-                Button("new_trans_form.add_reminder") {
-                    isShowingDatePicker = true
-                }
-                .sheet(isPresented: $isShowingDatePicker) {
-                    DatePicker("Reminder", selection: $presenter.reminderDate)
-                        .padding(EdgeInsets.init(top: 30, leading: 40, bottom: 120, trailing: 50)).background(Color.gray.opacity(0.1))
+                
+                HStack {
+                    if presenter.reminderDate > Date() {
+                        HStack {
+                            Text("new_trans_form.reminder")
+                            Spacer()
+                            
+                            Button("\(presenter.reminderDate.formatted(date: .abbreviated, time: .shortened))") {
+                                withAnimation {
+                                    isShowingDatePicker = true
+                                }
+                            }
+                        }
+                        
+                    } else {
+                        Button("new_trans_form.add_reminder") {
+                            withAnimation {
+                                isShowingDatePicker = true
+                            }
+                        }
+                    }
+                    
                 }
                 
                 Button("new_trans_form.set_location") {
@@ -79,6 +93,13 @@ struct NewTransactionFormView: View {
         .navigationTitle("new_trans_form.title")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(false)
+        // Modifier
+        .modifier(
+            Popup(isPresented: $isShowingDatePicker, alignment: .bottom, content: {
+                DatePickerPopupView(selectedDate: $presenter.reminderDate, isPresented: $isShowingDatePicker)
+                .background(Color.white)
+                .cornerRadius(20, corners: [.topLeft, .topRight])
+        }))
         
     }
 }

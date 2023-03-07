@@ -10,6 +10,7 @@ import SwiftUI
 import ContactsUI
 
 struct ContactPickerView: UIViewControllerRepresentable {
+    @Environment(\.presentationMode) var presentationMode
     @Binding var contactInfo: CNContact
     
     class Coordinator: NSObject, CNContactPickerDelegate {
@@ -21,7 +22,10 @@ struct ContactPickerView: UIViewControllerRepresentable {
         
         func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
             self.parent.contactInfo = contact
-            picker.dismiss(animated: true)
+            parent.presentationMode.wrappedValue.dismiss()
+        }
+        func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+            parent.presentationMode.wrappedValue.dismiss()
         }
     }
     

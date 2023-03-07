@@ -21,7 +21,7 @@ class NewTransactionFormPresenter: ObservableObject {
     
     @Published var transLabel = ""
     @Published var transDate = Date()
-    @Published var reminderDate = Date()
+    @Published var reminderDate: Date = .now
     @Published var transAmount = ""
     @Published var transDetail = ""
     
