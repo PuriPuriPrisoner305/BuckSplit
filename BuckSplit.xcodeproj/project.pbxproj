@@ -18,6 +18,9 @@
 		223C350E29966D8C002AEAF0 /* NewTransactionFormEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223C350D29966D8C002AEAF0 /* NewTransactionFormEntity.swift */; };
 		223C351029967095002AEAF0 /* NewTransactionFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223C350F29967095002AEAF0 /* NewTransactionFormPresenter.swift */; };
 		227DB0D92997378C00976259 /* ContactPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DB0D82997378C00976259 /* ContactPicker.swift */; };
+		227E186029C99722001FBAA4 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E185F29C99722001FBAA4 /* SearchView.swift */; };
+		22AC752629B747AD006AE574 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AC752529B747AD006AE574 /* LocationPickerView.swift */; };
+		22AC752A29B74E40006AE574 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AC752929B74E40006AE574 /* LocationManager.swift */; };
 		22BF408129B72182008119AB /* DatePickerPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF408029B72182008119AB /* DatePickerPopupView.swift */; };
 		22BF408429B72487008119AB /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF408329B72487008119AB /* Popup.swift */; };
 		22BF408629B72797008119AB /* Shape+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF408529B72797008119AB /* Shape+Extension.swift */; };
@@ -44,6 +47,10 @@
 		223C350D29966D8C002AEAF0 /* NewTransactionFormEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionFormEntity.swift; sourceTree = "<group>"; };
 		223C350F29967095002AEAF0 /* NewTransactionFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionFormPresenter.swift; sourceTree = "<group>"; };
 		227DB0D82997378C00976259 /* ContactPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPicker.swift; sourceTree = "<group>"; };
+		227E185D29C985EA001FBAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		227E185F29C99722001FBAA4 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		22AC752529B747AD006AE574 /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
+		22AC752929B74E40006AE574 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		22BF408029B72182008119AB /* DatePickerPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerPopupView.swift; sourceTree = "<group>"; };
 		22BF408329B72487008119AB /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		22BF408529B72797008119AB /* Shape+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape+Extension.swift"; sourceTree = "<group>"; };
@@ -110,6 +117,7 @@
 		227DB0D32997227300976259 /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
+				22AC752429B7478B006AE574 /* LocationPicker */,
 				22CD9B282997C30600B40B73 /* BottomSheetDatePicker */,
 				227DB0D72997377C00976259 /* ContactPicker */,
 			);
@@ -122,6 +130,39 @@
 				227DB0D82997378C00976259 /* ContactPicker.swift */,
 			);
 			path = ContactPicker;
+			sourceTree = "<group>";
+		};
+		227E185E29C9970B001FBAA4 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				227E185F29C99722001FBAA4 /* SearchView.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		22AC752429B7478B006AE574 /* LocationPicker */ = {
+			isa = PBXGroup;
+			children = (
+				227E185E29C9970B001FBAA4 /* SearchView */,
+				22AC752529B747AD006AE574 /* LocationPickerView.swift */,
+			);
+			path = LocationPicker;
+			sourceTree = "<group>";
+		};
+		22AC752729B74D90006AE574 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				22AC752829B74DEA006AE574 /* LocationManager */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		22AC752829B74DEA006AE574 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				22AC752929B74E40006AE574 /* LocationManager.swift */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		22BF408229B7246B008119AB /* ViewModifier */ = {
@@ -159,6 +200,7 @@
 		22DBD9E528A52B0800E205C3 /* BuckSplit */ = {
 			isa = PBXGroup;
 			children = (
+				227E185D29C985EA001FBAA4 /* Info.plist */,
 				223C34FA2995BD03002AEAF0 /* Extension */,
 				223C34F32995BBF4002AEAF0 /* Resources */,
 				22DBD9F928A5359B00E205C3 /* Modules */,
@@ -182,6 +224,7 @@
 		22DBD9F928A5359B00E205C3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				22AC752729B74D90006AE574 /* Services */,
 				22BF408229B7246B008119AB /* ViewModifier */,
 				227DB0D32997227300976259 /* ReusableView */,
 				223C35032995EACD002AEAF0 /* CustomTab */,
@@ -275,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				223C351029967095002AEAF0 /* NewTransactionFormPresenter.swift in Sources */,
+				22AC752629B747AD006AE574 /* LocationPickerView.swift in Sources */,
 				22BF408629B72797008119AB /* Shape+Extension.swift in Sources */,
 				22DBD9F028A52B0A00E205C3 /* Persistence.swift in Sources */,
 				22BF408829B727CF008119AB /* View+Extension.swift in Sources */,
@@ -283,6 +327,7 @@
 				22DBD9E928A52B0800E205C3 /* ContentView.swift in Sources */,
 				22DBD9E728A52B0800E205C3 /* BuckSplitApp.swift in Sources */,
 				22DBD9F328A52B0A00E205C3 /* BuckSplit.xcdatamodeld in Sources */,
+				227E186029C99722001FBAA4 /* SearchView.swift in Sources */,
 				223C350C29966A28002AEAF0 /* NewTransactionFormView.swift in Sources */,
 				22BF408429B72487008119AB /* Popup.swift in Sources */,
 				223C35002995D269002AEAF0 /* ContentViewEntity.swift in Sources */,
@@ -290,6 +335,7 @@
 				227DB0D92997378C00976259 /* ContactPicker.swift in Sources */,
 				223C35052995EAE9002AEAF0 /* CustomTabView.swift in Sources */,
 				223C34FC2995BD1F002AEAF0 /* String+Extension.swift in Sources */,
+				22AC752A29B74E40006AE574 /* LocationManager.swift in Sources */,
 				22DBD9FC28A5360200E205C3 /* ContentViewModel.swift in Sources */,
 				223C350729965FCA002AEAF0 /* CustomTabEntity.swift in Sources */,
 				22BF408129B72182008119AB /* DatePickerPopupView.swift in Sources */,
@@ -438,8 +484,9 @@
 				DEVELOPMENT_TEAM = 8WWR82GRZD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BuckSplit/Info.plist;
 				INFOPLIST_KEY_NSContactsUsageDescription = "We may need to displaying contact list for lender/debter info";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We may need to access and store current location of transaction";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -469,8 +516,9 @@
 				DEVELOPMENT_TEAM = 8WWR82GRZD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BuckSplit/Info.plist;
 				INFOPLIST_KEY_NSContactsUsageDescription = "We may need to displaying contact list for lender/debter info";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We may need to access and store current location of transaction";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

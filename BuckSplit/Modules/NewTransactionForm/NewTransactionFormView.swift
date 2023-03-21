@@ -7,10 +7,13 @@
 
 import SwiftUI
 import Contacts
+import CoreLocation
 
 struct NewTransactionFormView: View {
     @State private var isShowingContactPicker = false
     @State private var isShowingDatePicker = false
+    @State private var isShowingLocationPicker = false
+    
     @ObservedObject private var presenter = NewTransactionFormPresenter()
     
     var body: some View {
@@ -81,9 +84,12 @@ struct NewTransactionFormView: View {
                     
                 }
                 
-                Button("new_trans_form.set_location") {
-                    
-                }
+                // MapView will be available later
+//                NavigationLink {
+//                    LocationPickerView(selectedLocation: $presenter.transLocation)
+//                } label: {
+//                   Text("new_trans_form.set_location")
+//                }
                 
                 Button("new_trans_form.add_photo") {
                     

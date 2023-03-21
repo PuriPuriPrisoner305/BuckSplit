@@ -7,6 +7,8 @@
 
 import Foundation
 import Contacts
+import SwiftUI
+import CoreLocation
 
 class NewTransactionFormPresenter: ObservableObject {
     @Published var name = ""
@@ -24,6 +26,12 @@ class NewTransactionFormPresenter: ObservableObject {
     @Published var reminderDate: Date = .now
     @Published var transAmount = ""
     @Published var transDetail = ""
+    
+    @Published var transLocation = CLLocation(latitude: 35.55552, longitude: -121.55233) {
+        didSet {
+            print("didupdate \(transLocation)")
+        }
+    }
     
     var nameLabel: String = .localized("new_trans_form.lender")
     var transactionType: [TransactionType] = [.loan, .debt]
